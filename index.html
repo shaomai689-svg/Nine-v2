@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#080a0f">
+  <title>九域志 · 融合设定集 V2</title>
+  <meta name="description" content="探索第十签署者、九大阵营、六幕主线与一百零一位多种族角色共同构成的暗色奇幻互动设定集。">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23090b10'/%3E%3Cpath d='M12 12h40v40H12zM25.3 12v40M38.7 12v40M12 25.3h40M12 38.7h40' fill='none' stroke='%23d8b46a' stroke-width='3'/%3E%3Ccircle cx='32' cy='32' r='5' fill='%23f3dfb4'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&family=Noto+Serif+SC:wght@600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="#world"><span class="brand-mark"><i></i><i></i><i></i><i></i></span><span><strong>九域志</strong><small>NINEFOLD CODEX</small></span></a>
+    <nav aria-label="主要导航"><a class="active" href="#world">世界主线</a><a href="#truth">第十页</a><a href="#factions">九方势力</a><a href="#characters">角色名录</a></nav>
+    <button class="command-btn" id="focus-search" type="button" aria-label="打开角色搜索"><span>⌕</span> 搜索角色 <kbd>/</kbd></button>
+  </header>
+  <main>
+    <section class="hero" id="world">
+      <div class="hero-copy">
+        <p class="eyebrow">灰历纪元 · 317年 / THE ERA OF ASH</p>
+        <h1>所有人都记得<br>一个<em>不存在的昨天。</em></h1>
+        <p class="lede">十七年前，“灰日”抹去了第十城，也抹去了你的名字。如今《原初律典》九页重现，而空白的第十页正在寻找它曾经的签署者——你。</p>
+        <div class="hero-actions"><a href="#story">进入主线卷宗</a><a href="#truth" class="ghost">查阅第十页</a></div>
+      </div>
+      <aside class="world-card">
+        <p>MEMORY BREACH · 10</p>
+        <div class="rift-stage" aria-hidden="true">
+          <div class="rift-ring ring-one"></div><div class="rift-ring ring-two"></div><div class="rift-core"><span>十</span></div>
+          <i class="fragment f1">失</i><i class="fragment f2">城</i><i class="fragment f3">忆</i><i class="fragment f4">真</i><i class="fragment f5">灰</i><i class="fragment f6">页</i>
+        </div>
+        <p class="rift-caption">检测到一段不属于当前世界的记忆</p>
+        <dl><div><dt>当前卷</dt><dd>第一卷 · 失落之页</dd></div><div><dt>玩家身份</dt><dd>第十签署者</dd></div><div><dt>核心同伴</dt><dd>9</dd></div><div><dt>人物档案</dt><dd id="hero-count">101</dd></div></dl>
+      </aside>
+    </section>
+    <section class="story section" id="story">
+      <div class="section-head"><span>01</span><div><p>MAIN ARCHIVE</p><h2>主线 · 灰历断层</h2></div><p>从一场集体失忆，到决定世界记忆归属的九方战争。</p></div>
+      <div class="story-layout"><div class="chapter-list" id="chapter-list" role="tablist" aria-label="主线章节"></div><article class="chapter-detail" id="chapter-detail" role="tabpanel"></article></div>
+    </section>
+    <section class="truth section" id="truth">
+      <div class="section-head"><span>02</span><div><p>THE TENTH PAGE</p><h2>第十页 · 被删去的见证者</h2></div><p>它不是第十种阵营，而是保留重新选择的权利。</p></div>
+      <div class="truth-grid">
+        <article class="truth-manifesto">
+          <p class="eyebrow">灰日密约 · 未归档条款</p><h3>你曾让一座城<br>从现实中消失。</h3>
+          <p>灰历三百年，九方为终止多重现实崩塌，共同删除了无法被任何阵营容纳的第十城。九枚印章只能提出答案；你的第十个签名，才让答案成为事实。</p>
+          <p>签署后，你要求灰鸦杀死自己并抹去姓名。第十页却把你拆成四份，让一次赎罪变成了十七年的追逐。</p>
+          <div class="truth-choice"><span>终局命题</span><strong>真相值得多少个正在活着的人？</strong></div>
+        </article>
+        <div class="split-map" id="split-map" aria-label="第十签署者的四重分裂"></div>
+      </div>
+      <div class="core-head"><div><p>PLAYABLE ENSEMBLE</p><h3>九名核心同伴</h3></div><p>每个阵营各有一人进入主线队伍；他们不是阵营代言人，而是会背叛自己答案的人。</p></div>
+      <div class="core-cast" id="core-cast"></div>
+    </section>
+    <section class="factions section" id="factions">
+      <div class="section-head"><span>03</span><div><p>FACTION MATRIX</p><h2>九方势力</h2></div><p>九种答案，九页律典，彼此制衡也彼此渗透。</p></div>
+      <div class="faction-layout"><div class="matrix" id="faction-matrix" aria-label="九方势力矩阵"></div><article class="faction-dossier" id="faction-dossier"></article></div>
+    </section>
+    <section class="characters section" id="characters">
+      <div class="section-head"><span>04</span><div><p>CHARACTER ARCHIVE</p><h2>百人角色名录</h2></div><p>每个人都有自己的支线，也都在某处触及同一场风暴。</p></div>
+      <div class="archive-toolbar">
+        <label class="search-box"><span>⌕</span><input id="search" type="search" placeholder="搜索姓名、种族、身份、支线关键词…" autocomplete="off"></label>
+        <div class="filter-row" id="filters" role="group" aria-label="按阵营筛选"></div>
+        <div class="archive-actions"><span class="result-count" id="result-count"></span><button id="export-markdown" type="button">导出设定集 .md</button><button id="export-json" type="button">导出数据 .json</button></div>
+      </div>
+      <div class="character-grid" id="character-grid"></div>
+      <div class="empty-state" id="empty-state" hidden><strong>没有找到对应档案</strong><p>试试更换阵营，或搜索其他关键词。</p></div>
+    </section>
+    <section class="principle section">
+      <p>ARCHIVE NOTE · 09</p><blockquote>“阵营决定一个人习惯如何选择，<br>故事决定他会不会背叛自己的选择。”</blockquote>
+      <div><span>主线牵引支线</span><span>角色改变阵营</span><span>选择产生代价</span></div>
+    </section>
+  </main>
+  <dialog id="character-dialog" aria-labelledby="dialog-name">
+    <button class="dialog-close" type="button" aria-label="关闭角色档案">×</button><div class="dialog-art" id="dialog-art"></div>
+    <article class="dialog-copy">
+      <p class="dialog-faction" id="dialog-faction"></p><h2 id="dialog-name"></h2><p class="dialog-role" id="dialog-role"></p><blockquote id="dialog-quote"></blockquote>
+      <div class="dialog-section" id="dialog-arc-section"><h3>人物弧光</h3><p id="dialog-arc"></p></div><div class="dialog-section"><h3>个人支线</h3><p id="dialog-story"></p></div><div class="dialog-section"><h3>主线交点</h3><p id="dialog-link"></p></div>
+      <div class="dialog-relations"><span>关键关联</span><button id="relation-prev" type="button"></button><button id="relation-next" type="button"></button></div>
+      <div class="dialog-nav"><button id="dialog-prev" type="button">← 上一档案</button><span id="dialog-index"></span><button id="dialog-next" type="button">下一档案 →</button></div>
+    </article>
+  </dialog>
+  <footer><div><strong>九域志</strong><span>NINEFOLD CODEX · FUSION EDITION II</span></div><p>原创暗色奇幻世界观与游戏叙事设定集</p><span>9 势力 · 101 人物 · 6 主线章节</span></footer>
+  <script src="app.js"></script>
+</body>
+</html>
